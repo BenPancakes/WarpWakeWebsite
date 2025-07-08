@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!--Hi-->
   <!-- Socials Button -->
   <div class="side-socials">
     <a href="https://www.youtube.com/@RedVeilGames" target="_blank">YouTube</a>
@@ -19,9 +18,20 @@
   <!-- Artwork Viewer -->
   <div class="artwork-viewer">
     <button id="prev">&#8592;</button>
-    <img id="artwork" src="art1.jpg" alt="Artwork" />
+    <img id="artwork" src="Art/BigTree.png" alt="Artwork" />
     <button id="next">&#8594;</button>
   </div>
 
+  <script>
+  const artwork = document.getElementById("artwork");
+
+  document.getElementById("prev").addEventListener("click", () => {
+    artwork.src = "Art/BigTree.png";
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    artwork.src = "Art/ScoloPeopleScary.gif";
+  });
+</script>
 </body>
 </html>
