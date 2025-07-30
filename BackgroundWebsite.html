@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>The Priests Sketch Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         html, body 
         {
@@ -41,10 +42,10 @@
 
         .bookshelf 
         {
-            top: 40%;
-            left: 30%;
-            width: 5%;
-            height: 7%;
+            top: 2%;
+            left: 12%;
+            width: 21%;
+            height: 90%;
         }
 
         .clock 
@@ -72,15 +73,68 @@
             width: 6%;
             height: 13%;
         }
+
+        .text-box 
+        {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: beige;
+            color: #000;
+            font-size: 12px;
+            display: none;
+            border-top: 3px solid #444;
+            z-index: 1000;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        .birdcage:hover ~ .birdcage-thoughts
+        {
+            display: block;
+        }
+
+        .tv:hover ~ .tv-thoughts 
+        {
+            display: block;
+        }
+
+        .bookshelf:hover ~ .bookshelf-thoughts 
+        {
+            display: block;
+        }
+
+        .clock:hover ~ .clock-thoughts 
+        {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
     <div class="background-container">
         <div class="background-image">
-            <a href="https://github.com/BenPancakes/WarpWakeWebsite" class="hotspot bookshelf"></a>
+            <a href="https://benpancakes.github.io/WarpWakeWebsite/" class="hotspot bookshelf"></a>
             <a href="https://example.com/clock" class="hotspot clock"></a>
             <a href="https://twitter.com" class="hotspot birdcage"></a>
             <a href="https://www.youtube.com/@RedVeilGames" class="hotspot tv"></a>
+
+            <div class="text-box birdcage-thoughts">
+                I never had to feed this beast. I wonder how much the veil has affected its lineage.
+            </div>
+
+            <div class="text-box tv-thoughts">
+                This box only hums when the room gets cold. I think it's waiting for someone.
+            </div>
+
+            <div class="text-box bookshelf-thoughts">
+                My notes of my experiments. I dont know why they change color and size. 
+            </div>
+
+            <div class="text-box clock-thoughts">
+                It always is ticking but its hands never move.
+            </div>
         </div>
     </div>
 </body>
