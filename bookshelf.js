@@ -1,14 +1,16 @@
 import { getRootCssStyles } from './cssUtilities.js';
 
 // Utility: Returns a random integer between min and max this is so the books have differing sizes
-function getRandomInt(min, max) {
+function getRandomInt(min, max)
+{
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Utility: Picks a random item from an array
-function randomChoice(array) {
+function randomChoice(array)
+{
     return array[Math.floor(Math.random() * array.length)];
 }
 
@@ -20,7 +22,7 @@ let tops = Object.values(document.getElementsByClassName("top"));
 // Get available CSS pattern variables from :root (e.g., --spine-tartan, etc.)
 let availablePatterns = getRootCssStyles();
 
-// Define a palette of allowed solid colors
+// Creates a pallet of some colors I think would look nice
 let availableColors = [
     "maroon",
     "darkgreen",
@@ -31,8 +33,9 @@ let availableColors = [
     "midnightblue",
 ];
 
-// Assign a random height, pattern, and color to each book
-spines.map(function (s, i) {
+// Assign a random height, pattern, and color to each book this just adds to the lore and some of the flavour of the world
+spines.map(function (s, i)
+{
     let randomHeight = getRandomInt(220, 290);
     s.style.height = `${randomHeight}px`;
     s.style.top = `${280 - randomHeight}px`;

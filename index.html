@@ -1,36 +1,164 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bookshelf</title>
-    <link rel="stylesheet" href="Style.css" />
+    <title>The Office of the Priest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        html, body 
+        {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+        }
+
+        .background-container 
+        {
+            height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-image {
+            background-image: url('Art/Colored Background.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top center;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            box-shadow: 0 0 0 0px #ddd;
+        }
+
+        .hotspot 
+        {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .bookshelf 
+        {
+            top: 0%;
+            left: 6%;
+            width: 18%;
+            height: 80%;
+        }
+
+        .clock 
+        {
+            top: 5%;
+            left: 68%;
+            width: 9%;
+            height: 18%;
+            border-radius: 50%;
+            transform: translate(-45%, 0);
+        }
+
+        .birdcage 
+        {
+            top: 35%;
+            left: 79%;
+            width: 5%;
+            height: 7%;
+        }
+
+        .tv 
+        {
+            top: 38%;
+            left: 25%;
+            width: 12%;
+            height: 22%;
+        }
+
+        .plant 
+        {
+            bottom: 90%;
+            top: 0%;
+            left: 75%;
+            width: 18%;
+            height: 20%;
+        }
+
+        .text-box 
+        {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 27px 20px;
+            background-color: beige;
+            color: #000;
+            font-size: 12px;
+            display: none;
+            border-top: 3px solid #444;
+            z-index: 1000;
+            font-family: 'Press Start 2P', monospace;
+            image-rendering: pixelated;
+            border: 4px solid #444;
+            box-shadow: 0 0 0 4px #ddd,
+                        4px 4px 0 0 #222;
+            border-radius: 0;
+        }
+
+        .birdcage:hover ~ .birdcage-thoughts
+        {
+            display: block;
+        }
+
+        .tv:hover ~ .tv-thoughts 
+        {
+            display: block;
+        }
+
+        .bookshelf:hover ~ .bookshelf-thoughts 
+        {
+            display: block;
+        }
+
+        .clock:hover ~ .clock-thoughts 
+        {
+            display: block;
+        }
+
+        .plant:hover ~ .plant-thoughts 
+        {
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="bookshelf">
-        <div class="book">
-            <div class="side spine">
-                <span class="spine-title">Entities, Daemons, and Magic</span>
+    <div class="background-container">
+        <div class="background-image">
+            <a href="https://www.twitch.tv/redveilgames" class="hotspot bookshelf"></a>
+            <a href="https://www.tiktok.com/@redveilgames" class="hotspot clock"></a>
+            <a href="https://x.com/RedVeilGames" class="hotspot birdcage"></a>
+            <a href="https://www.youtube.com/@RedVeilGames" class="hotspot tv"></a>
+            <a href="https://linktr.ee/RedVeilGames" class="hotspot plant"></a>
+
+            <div class="text-box birdcage-thoughts">
+                I never have to feed this beast. I wonder how much the veil has affected its lineage.
             </div>
-            <div class="side top"></div>
-            <div class="side cover"></div>
-        </div>
-        <div class="book">
-            <div class="side spine">
-                <span class="spine-title">Experimental Procedures On Creatures Affected By Forces From the Veil</span>
+
+            <div class="text-box tv-thoughts">
+                This box only hums when the room gets cold. I think it's waiting for something.
             </div>
-            <div class="side top"></div>
-            <div class="side cover"></div>
-        </div>
-        <div class="book">
-            <div class="side spine">
-                <span class="spine-title">Visions of the Land: A Chronicle of Toil</span>
+
+            <div class="text-box bookshelf-thoughts">
+                My notes of my experiments. I dont know why the notes change color and size.
             </div>
-            <div class="side top"></div>
-            <div class="side cover"></div>
+
+            <div class="text-box clock-thoughts">
+                It is always ticking but its hands never move.
+            </div>
+
+            <div class="text-box plant-thoughts">
+                Its leaves whine and scream.
+            </div>
         </div>
     </div>
-
-    <script type="module" src="bookshelf.js"></script>
 </body>
 </html>
